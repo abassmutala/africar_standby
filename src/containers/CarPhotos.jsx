@@ -39,7 +39,7 @@ const CarPhotos = (props) => {
       </section>
       <section class="py-12 hidden lg:block overflow-hidden bg-white text-gray-700">
           <div className="grid grid-cols-2 gap-x-6 h-[480px]">
-            <div class="relative overflow-hidden bg-no-repeat bg-cover w-full cursor-pointer rounded-l-lg">
+            <div className="relative overflow-hidden bg-no-repeat bg-cover w-full cursor-pointer rounded-l-lg">
               <img
                 alt="gallery"
                 class="block object-cover object-center w-full h-full hover:opacity-90 transition duration-300 ease-in-out"
@@ -47,35 +47,35 @@ const CarPhotos = (props) => {
               />
             </div>
             <div className="grid grid-cols-2 grid-rows-2 gap-6 w-full cursor-pointer">
-              <div class="relative overflow-hidden bg-no-repeat bg-cover w-full rounded-0">
+              <div className="relative overflow-hidden bg-no-repeat bg-cover w-full rounded-0">
                 <img
                   alt="gallery"
                   class="block object-cover object-center w-full h-full hover:opacity-90 transition duration-300 ease-in-out"
                   src={back}
                 />
               </div>
-              <div class="relative overflow-hidden bg-no-repeat bg-cover w-full rounded-tr-lg">
+              <div className="relative overflow-hidden bg-no-repeat bg-cover w-full rounded-tr-lg">
                 <img
                   alt="gallery"
                   class="block object-cover object-center w-full h-full hover:opacity-90 transition duration-300 ease-in-out"
                   src={gear}
                 />
               </div>
-              <div class="relative overflow-hidden bg-no-repeat bg-cover w-full rounded-0">
+              <div className="relative overflow-hidden bg-no-repeat bg-cover w-full rounded-0">
                 <img
                   alt="gallery"
                   class="block object-cover object-center w-full h-full hover:opacity-90 transition duration-300 ease-in-out"
                   src={interior}
                 />
               </div>
-              <div class="relative overflow-hidden bg-no-repeat bg-cover w-full rounded-br-lg">
+              <div className="relative overflow-hidden bg-no-repeat bg-cover w-full rounded-br-lg">
                 <img
                   alt="gallery"
                   class="block object-cover object-center w-full h-full hover:opacity-90 transition duration-300 ease-in-out"
                   src={dash}
                 />
                 <span class="AfricarTitle4 absolute flex items-center justify-center bg-black text-white backdrop-blur-xl bg-opacity-60 bottom-0 right-0 w-full h-full gap-2 p-4 rounded-0 cursor-pointer hover:text-primary-color">
-                  View all 64 photos
+                  View all 14 photos
                 </span>
               </div>
             </div>

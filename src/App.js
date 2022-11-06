@@ -3,12 +3,13 @@ import Footer from "./components/Footer";
 import Header from "./containers/Header";
 import Navbar from "./components/Navbar";
 // import BecomeAPartner from "./containers/BecomeAPartner";
-import Testimonials from "./containers/Testimonials";
-import AppCTA from "./containers/AppCTA";
+// import Testimonials from "./containers/Testimonials";
+// import AppCTA from "./containers/AppCTA";
 import Featured from "./containers/Featured";
-import BrowseByType from "./containers/BrowseByType";
+// import BrowseByType from "./containers/BrowseByType";
 import Features from "./containers/Features";
-import BrowseByMake from "./containers/BrowseByMake";
+// import BrowseByMake from "./containers/BrowseByMake";
+import Benefits from "./containers/Benefits";
 
 function App() {
   return (
@@ -16,62 +17,71 @@ function App() {
       <Navbar />
       <Header />
       <Featured />
-      <BrowseByType />
       <Features />
-      <BrowseByMake />
+      <Benefits />
+      {/* <Featured />
+      <BrowseByType />
+      <BrowseByMake /> */}
+      <Footer />
+    </div>
+  );
+}
 
-      {/* <div class="flex font-sans">
-  <div class="flex-none w-48 relative">
+export default App;
+
+{
+  /* <div className="flex font-sans">
+  <div className="flex-none w-48 relative">
     <img src="https://tailwindcss.com/_next/static/media/classic-utility-jacket.0f108046e151c8576017eaf383406fe6.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
   </div>
   <form class="flex-auto p-6">
-    <div class="flex flex-wrap">
+    <div className="flex flex-wrap">
       <h1 class="flex-auto text-lg font-semibold text-slate-900">
         Classic Utility Jacket
       </h1>
-      <div class="text-lg font-semibold text-slate-500">
+      <div className="text-lg font-semibold text-slate-500">
         $110.00
       </div>
-      <div class="w-full flex-none text-sm font-medium text-slate-700 mt-2">
+      <div className="w-full flex-none text-sm font-medium text-slate-700 mt-2">
         In stock
       </div>
     </div>
-    <div class="flex items-baseline mt-4 mb-6 pb-6 border-b border-slate-200">
-      <div class="space-x-2 flex text-sm">
+    <div className="flex items-baseline mt-4 mb-6 pb-6 border-b border-slate-200">
+      <div className="space-x-2 flex text-sm">
         <label>
           <input class="sr-only peer" name="size" type="radio" value="xs" checked />
-          <div class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
+          <div className="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
             XS
           </div>
         </label>
         <label>
           <input class="sr-only peer" name="size" type="radio" value="s" />
-          <div class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
+          <div className="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
             S
           </div>
         </label>
         <label>
           <input class="sr-only peer" name="size" type="radio" value="m" />
-          <div class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
+          <div className="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
             M
           </div>
         </label>
         <label>
           <input class="sr-only peer" name="size" type="radio" value="l" />
-          <div class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
+          <div className="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
             L
           </div>
         </label>
         <label>
           <input class="sr-only peer" name="size" type="radio" value="xl" />
-          <div class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
+          <div className="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
             XL
           </div>
         </label>
       </div>
     </div>
-    <div class="flex space-x-4 mb-6 text-sm font-medium">
-      <div class="flex-auto flex space-x-4">
+    <div className="flex space-x-4 mb-6 text-sm font-medium">
+      <div className="flex-auto flex space-x-4">
         <button class="h-10 px-6 font-semibold rounded-md bg-black text-white" type="submit">
           Buy now
         </button>
@@ -81,7 +91,7 @@ function App() {
       </div>
       <button class="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border border-slate-200" type="button" aria-label="Like">
         <svg width="20" height="20" fill="currentColor" aria-hidden="true">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
+          <path fillRule="evenodd" clip-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
         </svg>
       </button>
     </div>
@@ -89,12 +99,14 @@ function App() {
       Free shipping on all continental US orders.
     </p>
   </form>
-</div> */}
+</div> */
+}
 
-      {/* <section class="bg-white dark:bg-gray-900">
-    <div class="relative flex">
-        <div class="min-h-screen lg:w-1/3"></div>
-        <div class="hidden w-3/4 min-h-screen bg-gray-100 dark:bg-gray-800 lg:block"></div>
+{
+  /* <section class="bg-white dark:bg-gray-900">
+    <div className="relative flex">
+        <div className="min-h-screen lg:w-1/3"></div>
+        <div className="hidden w-3/4 min-h-screen bg-gray-100 dark:bg-gray-800 lg:block"></div>
 
         <div
             class="container flex flex-col justify-center w-full min-h-screen px-6 py-10 mx-auto lg:absolute lg:inset-x-0">
@@ -102,10 +114,10 @@ function App() {
                 Become a partner
             </h1>
 
-            <div class="mt-10 lg:mt-20 lg:flex lg:items-center">
+            <div className="mt-10 lg:mt-20 lg:flex lg:items-center">
                 <img class="object-cover object-center w-full lg:w-[32rem] rounded-lg h-96" src={car_owner} alt="" />
 
-                <div class="mt-8 lg:px-10 lg:mt-0">
+                <div className="mt-8 lg:px-10 lg:mt-0">
                     <h1 class="text-2xl font-semibold text-gray-800 dark:text-white lg:w-72">
                         Help us improve our productivity
                     </h1>
@@ -121,7 +133,7 @@ function App() {
                 </div>
             </div>
 
-            <div class="flex items-center justify-between mt-12 lg:justify-start">
+            <div className="flex items-center justify-between mt-12 lg:justify-start">
                 <button class="p-2 text-gray-800 transition-colors duration-300 border rounded-full rtl:-scale-x-100 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800 hover:bg-gray-100">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
@@ -136,9 +148,11 @@ function App() {
             </div>
         </div>
     </div>
-</section> */}
+</section> */
+}
 
-      {/* <div className="relative flex flex-col py-16 lg:pt-0 lg:flex-col lg:pb-0">
+{
+  /* <div className="relative flex flex-col py-16 lg:pt-0 lg:flex-col lg:pb-0">
       <div className="flex flex-col items-start w-full max-w-xl px-4 mx-auto lg:px-8 lg:max-w-screen-xl">
         <div className="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
           <div className="max-w-xl mb-6">
@@ -185,9 +199,11 @@ function App() {
           alt=""
         />
       </div>
-    </div> */}
+    </div> */
+}
 
-      {/* <div className="relative flex flex-col-reverse py-16 lg:pt-0 lg:flex-col lg:pb-0">
+{
+  /* <div className="relative flex flex-col-reverse py-16 lg:pt-0 lg:flex-col lg:pb-0">
       <div className="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0">
         <svg
           className="absolute left-0 hidden h-full text-white transform -translate-x-1/2 lg:block"
@@ -238,15 +254,14 @@ function App() {
           </div>
         </div>
       </div>
-    </div> */}
-
-      {/* <BecomeAPartner /> */}
-
-      <Testimonials />
-      <AppCTA />
-      <Footer />
-    </div>
-  );
+    </div> */
 }
 
-export default App;
+{
+  /* <BecomeAPartner /> */
+}
+
+{
+  /* <Testimonials />
+      <AppCTA /> */
+}

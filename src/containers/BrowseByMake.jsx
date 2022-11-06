@@ -107,9 +107,9 @@ const BrowseByMake = () => {
           <h2 className="text-center text-3xl md:text-4xl pb-4">
             Browse our fleet by make
           </h2>
-          <div class="flex flex-row items-center justify-between lg:justify-start">
+          <div className="flex flex-row items-center justify-between lg:justify-start">
             <button class="p-2 text-gray-800 transition-colors duration-300 border rounded-full rtl:-scale-x-100 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800 hover:bg-gray-100">
-              <MdOutlineChevronLeft size={24} />{" "}
+              <MdOutlineChevronLeft size={24} />
             </button>
             <button class="p-2 text-gray-800 transition-colors duration-300 border rounded-full rtl:-scale-x-100 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800 lg:mx-6 hover:bg-gray-100">
               <MdOutlineChevronRight size={24} />

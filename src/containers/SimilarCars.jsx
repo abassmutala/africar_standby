@@ -1,4 +1,4 @@
-const CarFeatures = () => {
+const SimilarCars = () => {
   return (
     <section>
       <div className="flex flex-row items-center justify-between gap-x-6">
@@ -12,4 +12,4 @@ const CarFeatures = () => {
   );
 };
 
-export default CarFeatures;
+export default SimilarCars;

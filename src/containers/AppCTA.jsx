@@ -6,14 +6,14 @@ const AppCTA = () => {
   return (
     <section className="py-8 lg:py-12">
       <div className="">
-        <div class="relative flex items-center h-64 bg-black rounded-lg lg:h-[320px] xxl:h-[360px]">
+        <div className="relative flex items-center h-64 bg-black rounded-lg lg:h-[320px] xxl:h-[360px]">
           <img
             src={app}
             alt="Pattern"
             class="absolute inset-0 object-cover w-full h-full opacity-80 lg:rounded-xl"
           />
 
-          <div class="block relative py-8 px-4 md:p-12 w-full">
+          <div className="block relative py-8 px-4 md:p-12 w-full">
             <h2 class="mb-6 text-3xl font-bold text-white sm:text-4xl">
               Download the Africar app
             </h2>

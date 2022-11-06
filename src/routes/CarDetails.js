@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import CarPhotos from "../containers/CarPhotos";
 import CarDescription from "../containers/CarDescription";
 import SimilarCars from "../containers/SimilarCars";
 import Navbar from "../components/Navbar";
@@ -10,7 +9,6 @@ export default class CarDetails extends Component {
     return (
       <div className="bg-white">
         <Navbar />
-        <CarPhotos />
         <CarDescription />
         <SimilarCars />
         <Footer />

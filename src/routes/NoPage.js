@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export default class NoPage extends Component {
   render() {
@@ -29,6 +30,11 @@ export default class NoPage extends Component {
             The page you are looking for doesn't exist or <br />
             has been removed.
           </p>
+          <div className="mt-4">
+            <Link className="btn-med btn-flat" to="/" replace={true}>
+              <span className="truncate">Go home</span>
+            </Link>
+          </div>
         </div>
       </div>
     );

@@ -1,7 +1,8 @@
 import { Fragment, useState } from "react";
 import { Dialog, Popover, Transition } from "@headlessui/react";
 import { MdOutlineMenu, MdOutlineClose } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../contexts/AuthContext";
 
 const navigation = {
   pages: [
@@ -10,11 +11,34 @@ const navigation = {
   ],
 };
 
-export default function ProductDetails() {
+export default function Navbar() {
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
+  const { currentUser, logOut } = useAuth();
+
+  const handleSignOut = async (_event) => {
+    _event.preventDefault();
+    try {
+      setIsLoading(true);
+      setError("");
+      //     if (window.confirm("Are you sure you want to sign out of Africar?")) {
+      await logOut();
+      navigate("/sign-in")
+      //     } else {
+      //       window.close();
+      //     }
+      //     alert("Signed out successfully!!");
+      //     return;
+    } catch (error) {
+      alert(error.message);
+    }
+    setIsLoading(false);
+  };
 
   return (
-    <div className="bg-white">
+    <div className="fixed top-0 bg-white z-10 w-full">
       {/* Mobile menu */}
       <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="relative z-40 lg:hidden" onClose={setOpen}>
@@ -81,15 +105,12 @@ export default function ProductDetails() {
                       Help
                     </Link>
                   </div>
-                </div>
-
-                <div className="border-t border-gray-200 py-6 px-4">
                   <div className="flow-root">
                     <Link
-                      to="/become-a-host"
+                      to="/sign-up"
                       className="-m-2 p-2 block font-medium text-gray-900"
                     >
-                      Join
+                      Sign in
                     </Link>
                   </div>
                 </div>
@@ -99,7 +120,7 @@ export default function ProductDetails() {
         </Dialog>
       </Transition.Root>
 
-      <header className="sticky top-0 bg-white border-b border-gray-200">
+      <header className="bg-white border-b border-gray-200">
         <nav
           aria-label="Top"
           className="px-4 mx-auto max-w-[1440px] sm:px-6 lg:px-8"
@@ -118,7 +139,7 @@ export default function ProductDetails() {
             <div className="ml-4 flex lg:ml-0">
               <a href="/">
                 <span className="sr-only">Logo</span>
-                <div class="block">
+                <div className="block">
                   <div className="flex flex-row">
                     <h6 className="text-3xl font-bold">africar</h6>
                     <span class="flex mt-5">
@@ -148,27 +169,49 @@ export default function ProductDetails() {
             <div className="ml-auto flex items-center">
               <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end space-x-2">
                 <Link
-                  to="/sign-in"
-                  className="text-gray-700 px-4 py-6 hover:bg-button-hover whitespace-nowrap"
-                >
-                  <span>Sign in</span>
-                </Link>
-                <span className="h-6 w-px bg-gray-300" aria-hidden="true" />
-                <Link
                   to="/"
                   className="text-gray-700 px-4 py-6 hover:bg-button-hover whitespace-nowrap"
                 >
                   <span>Help</span>
                 </Link>
+                <span
+                  className="truncate h-6 w-px bg-gray-300"
+                  aria-hidden="true"
+                />
+                {/* {_user == null && ( */}
                 <Link
-                  type="button"
+                  to="/sign-up"
                   className="text-gray-700 px-4 py-6 hover:bg-button-hover whitespace-nowrap"
-                  to="/become-a-host"
                 >
-                  <span class="whitespace-nowrap px-4 py-[2px] rounded-full border-2 border-primary-color">
-                    Join
-                  </span>
+                  <span className="truncate">Sign up</span>
                 </Link>
+                {/* )} */}
+                {currentUser != null ? (
+                  <Link to="profile">
+                    <div className="rounded-full w-10 h-10 border-2 border-primary-color bg-primary-color-light-100 flex items-center justify-center hover:bg-gray-200 cursor-pointer">
+                      <h3 className="AfricarTitle4 text-primary-color">
+                        {currentUser.email[0].toUpperCase()}
+                        {/* {console.log(_user.name)} */}
+                      </h3>
+                    </div>
+                  </Link>
+                ) : (
+                  // <button
+                  //   type="button"
+                  //   className="btn-sm btn-elevated bg-secondary-color ring-secondary-color hover:shadow-secondary-color hover:shadow-md"
+                  //   disabled={isLoading}
+                  //   onClick={handleSignOut}
+                  // >
+                  //   <span class="truncate">Sign out</span>
+                  // </button>
+                  <button
+                    type="button"
+                    className="btn-sm btn-elevated bg-secondary-color ring-secondary-color hover:shadow-secondary-color hover:shadow-md"
+                    onClick={handleSignOut}
+                  >
+                    <span class="truncate">Sign in</span>
+                  </button>
+                )}
               </div>
             </div>
           </div>

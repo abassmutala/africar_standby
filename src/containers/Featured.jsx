@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 import "./styles.css";
 import { Navigation } from "swiper";
 import { useNavigate } from "react-router-dom";
+import { MdOutlineChevronLeft, MdOutlineChevronRight } from "react-icons/md";
 
 const featuredCars = {
   Saloon: [
@@ -225,12 +226,23 @@ const Featured = () => {
   return (
     <section className="py-8 lg:py-12">
       <div>
-        <div className="content-title flex flex-col items-center">
+        <div className="flex flex-row items-center justify-between gap-x-4">
+          <h2 className="text-center AfricarTitle2 pb-4">Featured cars</h2>
+          <div className="flex flex-row items-center justify-between lg:justify-start">
+            <button class="p-2 text-gray-800 transition-colors duration-300 border border-gray-500 rounded-full hover:bg-gray-100">
+              <MdOutlineChevronLeft size={24} />
+            </button>
+            <button class="p-2 text-gray-800 transition-colors duration-300 border border-gray-500 rounded-full lg:mx-6 hover:bg-gray-100">
+              <MdOutlineChevronRight size={24} />
+            </button>
+          </div>
+        </div>
+        {/* <div className="content-title flex flex-col items-center">
           <h2 className="text-center AfricarTitle2 pb-4">Featured cars</h2>
           <span className="text-xl text-gray-600">
             Premium, guaranteed and fully equipped
           </span>
-        </div>
+        </div> */}
         <div className="pt-12">
           <Tab.Group>
             <Tab.List className="flex space-x-1 rounded-xl bg-footer-bg p-1">
@@ -239,7 +251,7 @@ const Featured = () => {
                   key={category}
                   className={({ selected }) =>
                     classNames(
-                      "w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-primary-color",
+                      "w-full rounded-lg py-2.5 font-medium leading-5 text-primary-color",
                       "ring-white ring-opacity-60 ring-offset-2 ring-offset-primary-color focus:outline-none focus:ring-2",
                       selected
                         ? "bg-white shadow"
@@ -263,8 +275,8 @@ const Featured = () => {
                   <div className="h-[400px]">
                     <Swiper
                       modules={[Navigation]}
-                      navigation={true}
-                      //   loop={true}
+                      navigation={false}
+                      loop={true}
                       slidesPerView={1}
                       slidesPerGroup={1}
                       breakpoints={{

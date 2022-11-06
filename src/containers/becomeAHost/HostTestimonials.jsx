@@ -47,7 +47,7 @@ const HostTestimonials = () => {
                   />
                   <span className="flex-grow flex flex-col pl-4">
                     <span className="text-gray-900">{testimonial.name}</span>
-                    <span className="text-gray-500 text-sm">
+                    <span className="text-gray-500">
                       {testimonial.location}
                     </span>
                   </span>

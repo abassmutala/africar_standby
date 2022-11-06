@@ -49,17 +49,17 @@
 
 @layer components {
   .btn-elevated {
-    @apply inline-block whitespace-nowrap rounded-lg bg-primary-color text-white text-base transition duration-300 ease-out border-none ring-1 ring-primary-color shrink-0 hover:shadow-primary-color-light-100 hover:shadow-xl focus:outline-none focus:ring;
-    /* text-secondary-color border-none outline-none hover:shadow-lg shadow-primary-color focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out; */
+    @apply inline-block whitespace-nowrap rounded-sm bg-primary-color text-white text-base transition duration-300 ease-out border-none ring-1 ring-primary-color shrink-0 hover:shadow-primary-color-light-100 hover:shadow-xl hover:scale-105 focus:outline-none focus:ring;
+    /* text-primary-color border-none outline-none hover:shadow-lg shadow-primary-color focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out; */
   }
 
   .btn-outlined {
-    @apply relative inline-block whitespace-nowrap rounded-lg bg-none text-primary-color text-base transition duration-300 ease-out border border-primary-color shrink-0 hover:bg-button-hover focus:outline-none focus:ring-0;
+    @apply relative inline-block whitespace-nowrap rounded-sm bg-none text-primary-color text-base transition duration-300 ease-out border border-primary-color shrink-0 hover:bg-primary-color-light-100 focus:outline-none focus:ring-0;
   }
   /* inline-flex items-center justify-center overflow-hidden shadow-md group} */
 
   .btn-flat {
-    @apply relative inline-block whitespace-nowrap rounded-lg bg-transparent hover:bg-primary-color-light-100 text-primary-color text-lg transition duration-300 ease-out border border-none shrink-0 focus:outline-none focus:ring-0 active:border-none;
+    @apply relative inline-block whitespace-nowrap rounded-sm bg-transparent hover:bg-primary-color-light-100 text-primary-color text-lg transition duration-300 ease-out border border-none shrink-0 focus:outline-none focus:ring-0 active:border-none;
   }
 
   .btn-sm {
@@ -148,6 +148,20 @@ input,
 select {
   height: 45px;
 }
+
+/* .input_error_message {
+  display: none;
+  color: rgb(222 0 2)
+}
+
+input:invalid ~ p {
+  display: block;
+} */
+
+
+/* input[type='checkbox']:checked {
+  background-color: #DE0002;
+} */
 
 section {
   max-width: 672px;
